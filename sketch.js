@@ -24,8 +24,8 @@ function setup() {
 
     basket = createSprite(50,50,10,10);
 
-    //Create the Bodies Here.
-
+    Matter.Bodies.circle(x,y,radius,[options],[maxSide])
+  
     Engine.run(engine);
   
 }
@@ -53,6 +53,14 @@ function draw() {
  
 }
 
+function keyPressed(){
+  if (keyCode === Up_Arrow) {
+
+    Matter.Body.applyForce(paperBall.body.position,{x:85,y:-85});
+    
+  }
+
+}
 
 
 
