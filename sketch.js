@@ -6,15 +6,6 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
-function preload()
-{
-    var options = {
-      isStatic : false,
-      restution : 0.3,
-      friction : 0.5,
-      density : 1.2
-    }
-}
 
 function setup() {
     createCanvas(800, 700);
@@ -26,10 +17,6 @@ function setup() {
 
     Matter.Bodies.circle(x,y,radius,[options],[maxSide])
   
-    Engine.run(engine);
-  
-}
-
 boxPosition=width/2-100 ;
     box.Y=610;
     boxleftSprite=createSprite(boxPosition, boxY, 20,100);
@@ -44,6 +31,14 @@ boxPosition=width/2-100 ;
      boxleftSprite.shapeColor=color(255,0,0);
      boxRightBody = Bodies.rectangle(boxPosition+200-20 , boxY, 20,100 , {isStatic:true} );
      World.add(world, boxRightBody);
+
+
+    Engine.run(engine);
+
+    
+  
+}
+
 
 function draw() {
   rectMode(CENTER);
