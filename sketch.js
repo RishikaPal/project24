@@ -19,6 +19,8 @@ function setup() {
   
     groundObject=new ground(width/2,670,width,20);
 
+    paperObject=new paper(200,450,40);
+
     Engine.run(engine);
 
     
@@ -34,6 +36,8 @@ function draw() {
  
   groundObject.display();
 
+  paperObject.display();
+  
 }
 
 function keyPressed(){
