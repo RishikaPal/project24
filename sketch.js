@@ -8,14 +8,12 @@ const Body = Matter.Body;
 
 
 function setup() {
-    createCanvas(800, 700);
+  createCanvas(1600, 700); 
     
     engine = Engine.create();
     world = engine.world;
 
-    basket = createSprite(50,50,10,10);
-
-    Matter.Bodies.circle(x,y,radius,[options],[maxSide])
+    groundObject, paperObject
   
     groundObject=new ground(width/2,670,width,20);
 
@@ -40,14 +38,13 @@ function draw() {
   
 }
 
-function keyPressed(){
-  if (keyCode === Up_Arrow) {
 
-    Matter.Body.applyForce(paperBall.body.position,{x:85,y:-85});
-    
+  keyPressed()
+   {
+     if (keyCode === UP_ARROW) { 
+       Matter.Body.applyForce(paperObject.body,paperObject.body.position,{x:85,y:-85}); 
+     }
   }
-
-}
 
 
 
