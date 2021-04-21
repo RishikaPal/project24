@@ -1,5 +1,5 @@
-var paperBall , basket ;
-var ground ;
+var basket, paperObject;
+var  groundObject
 
 const Engine = Matter.Engine;
 const World = Matter.World;
@@ -13,9 +13,7 @@ function setup() {
     engine = Engine.create();
     world = engine.world;
 
-    groundObject, paperObject
-  
-    groundObject=new ground(width/2,670,width,20);
+      groundObject=new ground(width/2,670,width,20);
 
     paperObject=new paper(200,450,40);
 
@@ -39,7 +37,7 @@ function draw() {
 }
 
 
-  keyPressed()
+ function keyPressed()
    {
      if (keyCode === UP_ARROW) { 
        Matter.Body.applyForce(paperObject.body,paperObject.body.position,{x:85,y:-85}); 
