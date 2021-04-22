@@ -19,7 +19,7 @@ function setup() {
 
     Engine.run(engine);
 
-    
+    basket=new dustbin(1200,650);
   
 }
 
@@ -33,6 +33,8 @@ function draw() {
   groundObject.display();
 
   paperObject.display();
+
+  basket.display();
   
 }
 
